@@ -9,6 +9,8 @@ logger.add(logger.transports.Console, {
 logger.level = 'debug';
 // Initialize Discord Bot
 
+// Random Number Generator Function
+// Allows the bot to generate the numbes for the d20 roll
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
@@ -22,7 +24,7 @@ bot.on('ready', function(evt) {
     logger.info(bot.username + ' - (' + bot.id + ')');
 });
 bot.on('message', function(user, userID, channelID, message, evt) {
-    // Our bot needs to know if it will execute a command
+    // Bot needs to listen for commands.
     // It will listen for messages that will start with `!`
     if (message.substring(0, 1) == '!') {
         var args = message.substring(1).split(' ');
@@ -37,7 +39,7 @@ bot.on('message', function(user, userID, channelID, message, evt) {
                     message: getRandomInt(21)
                 });
                 break;
-                // Just add any case commands if you want to..
+                // Add case commands below here
         }
     }
 });
