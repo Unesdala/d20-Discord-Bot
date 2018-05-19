@@ -9,11 +9,13 @@ logger.add(logger.transports.Console, {
 logger.level = 'debug';
 // Initialize Discord Bot
 
-// Random Number Generator Function
+// Random Numbe Generator
 // Allows for the bot to actually generate the rolls
 
-function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
 }
 
 var bot = new Discord.Client({
@@ -38,14 +40,25 @@ bot.on('message', function(user, userID, channelID, message, evt) {
             case 'd20':
                 bot.sendMessage({
                     to: channelID,
-                    message: getRandomInt(21)
+                    message: getRandomInt(1, 21)
                 });
                 break;
-                // !d100
             case 'd100':
                 bot.sendMessage({
                     to: channelID,
-                    message: getRandomInt(101)
+                    message: getRandomInt(1, 101)
+                });
+                break;
+            case 'd8':
+                bot.sendMessage({
+                    to: channelID,
+                    message: getRandomInt(1, 9)
+                });
+                break;
+            case 'd4':
+                bot.sendMessage({
+                    to: channelID,
+                    message: getRandomInt(1, 5)
                 });
                 break;
                 // Add case commands after here.
