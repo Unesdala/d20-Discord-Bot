@@ -1,6 +1,6 @@
 {
     "name": "d20bot",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "RNG Bot to roll d20 dice in discord",
     "main": "bot.js",
     "author": "Rhayven Ayers",
