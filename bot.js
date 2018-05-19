@@ -9,11 +9,7 @@ logger.add(logger.transports.Console, {
 logger.level = 'debug';
 // Initialize Discord Bot
 
-<<<<<<< HEAD
 // Random Number Generator
-=======
-// Random Number Generator Function
->>>>>>> parent of f3b7fb4... More dice, dice shouldn't be able to roll 0 now
 // Allows for the bot to actually generate the rolls
 
 function getRandomInt(max) {
