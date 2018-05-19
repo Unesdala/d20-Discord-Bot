@@ -5,7 +5,7 @@
     "main": "bot.js",
     "author": "Rhayven Ayers",
     "dependencies": {
-        "discord.io": "github:woor/discord.io#gateway_v6",
+        "discord.io": "github:Woor/discord.io#gateway_v6",
         "winston": "^2.4.1"
     }
 }
