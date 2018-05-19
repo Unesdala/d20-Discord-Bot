@@ -9,7 +9,7 @@ logger.add(logger.transports.Console, {
 logger.level = 'debug';
 // Initialize Discord Bot
 
-// Random Numbe Generator
+// Random Number Generator
 // Allows for the bot to actually generate the rolls
 
 function getRandomInt(min, max) {
